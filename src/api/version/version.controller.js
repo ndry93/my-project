@@ -1,8 +1,9 @@
 const { config } = require('@src/config');
 
-function Controller(Service) {
+function Controller(services) {
+	const { VersionService } = services;
 	async function getVersion(ctx) {
-		const version = await Service.GetVersionFromFile();
+		const version = await VersionService.GetVersionFromFile();
 		const data = {
 			version,
 			env: config.env
