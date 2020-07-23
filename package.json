@@ -1,0 +1,76 @@
+{
+  "name": "my-project",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start:sls": "sls offline start",
+    "start:dev": "cross-env NODE_ENV=development node index.js",
+    "start:stg": "cross-env NODE_ENV=staging node index.js",
+    "start:prd": "cross-env NODE_ENV=production node index.js",
+    "test": "jest --verbose",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint-fix": "eslint --ignore-path .gitignore . --fix"
+  },
+  "author": "Hendry Yuwono",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndry93/my-project"
+  },
+  "bugs": {
+    "url": "https://github.com/ndry93/my-project/issues"
+  },
+  "homepage": "https://github.com/ndry93/my-project/issues",
+  "license": "Not open source",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "faker": "^4.1.0",
+    "jest": "^26.0.1",
+    "prettier": "^1.19.1",
+    "serverless-dynamodb-local": "^0.2.38",
+    "serverless-offline": "^5.12.0",
+    "supertest": "^0.13.0",
+    "cross-env": "^6.0.3"
+  },
+  "dependencies": {
+    "@sentry/node": "^5.17.0",
+    "aws-sdk": "^2.700.0",
+    "aws-serverless-koa": "^1.0.1",
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "koa": "^2.12.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^5.2.0",
+    "koa-joi-router": "^6.0.0",
+    "koa-joi-router-docs": "^1.0.3",
+    "koa-pino-logger": "^3.0.0",
+    "koa-morgan": "^1.0.1",
+    "pino-pretty": "^4.0.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "uuid": "^8.1.0",
+    "handlebars": "^4.7.3",
+    "module-alias": "^2.2.2",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1",
+    "sequelize": "^6.3.1"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@src": "./src",
+    "@server": "./server"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
+}
