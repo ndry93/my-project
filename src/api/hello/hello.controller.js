@@ -1,12 +1,12 @@
 function Controller(services, logger) {
 	const { HelloService, VersionService } = services;
+	console.log()
 	async function getHelloWorld(ctx) {
 		const hello = await HelloService.getHello();
 		const world = await HelloService.getWorld();
-		const data = `${hello.message} ${world.message}`;
 		const currentVersion = await VersionService.GetVersionFromFile();
-		logger.info(`current version:${currentVersion}`);
 
+		const data = `${hello.message} ${world.message} ${currentVersion}`;
 		logger.info(data);
 		ctx.body = data;
 	}

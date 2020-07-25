@@ -1,7 +1,6 @@
 function Service(options, logger) {
 	async function getHello() {
 		logger.info('execute getHello');
-		
 		const respObj = {
 			message: 'Hello'
 		};
@@ -10,7 +9,6 @@ function Service(options, logger) {
 	}
 
 	async function getWorld() {
-
 		const respObj = {
 			message: 'World'
 		};
