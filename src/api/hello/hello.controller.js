@@ -1,6 +1,5 @@
 function Controller(services, logger) {
 	const { HelloService, VersionService } = services;
-	console.log()
 	async function getHelloWorld(ctx) {
 		const hello = await HelloService.getHello();
 		const world = await HelloService.getWorld();
@@ -8,7 +7,9 @@ function Controller(services, logger) {
 
 		const data = `${hello.message} ${world.message} ${currentVersion}`;
 		logger.info(data);
-		ctx.body = data;
+		ctx.body = {
+			text: data
+		};
 	}
 
 	return {
